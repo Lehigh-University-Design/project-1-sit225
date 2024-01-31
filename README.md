@@ -1,2 +1,0 @@
-# starter
-Basic Starter Repository
