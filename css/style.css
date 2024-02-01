@@ -32,16 +32,26 @@ body {
   background: #c2c6ca;
   font-size: 12px;
   -webkit-font-smoothing: none;
-  width: 265px;
-  height: 118px;
+  width: 400px;
+  height: 200px;
+  position: fixed;
   box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px #C2C6CA, inset -1px -1px #85898d, inset 2px 2px white;
 
+  p{
+    padding-left: 15px;
+    padding-right: 5px;
+  }
   button {
     background: #c2c6ca;
     border: none;
     padding: 0;
     border-radius: 0;
     outline: none;
+
+    p{
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   .shadow {
@@ -60,8 +70,10 @@ body {
     background: #00a;
     padding: 2px 3px 3px;
     margin: 3px 2px 1px 3px;
+    position: relative;
     p {
       margin: 0;
+      padding-left: 0;
     }
     button {
       width: 15px;
