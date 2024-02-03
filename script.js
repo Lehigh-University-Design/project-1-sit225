@@ -1,25 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const popupCoordinates = [
+        { top: 370, left: 730 }, // Coordinates for popup_0
+        { top: 150, left: 300 }, // Coordinates for popup_1
+        { top: 600, left: 1000 }, // Coordinates for popup_2
+        { top: 700, left: 150 }, // Coordinates for popup_3
+        { top: 120, left: 1510 }, // Coordinates for popup_4
+        { top: 350, left: 666 }, // Coordinates for popup_5
+        { top: 540, left: 1400 }, // Coordinates for popup_6
+        { top: 50, left: 1280 }, // Coordinates for popup_7
+        { top: 330, left: 400 }, // Coordinates for popup_8
+        { top: 150, left: 1120 }, // Coordinates for popup_9
+        { top: 230, left: 790 }, // Coordinates for popup_10
+        // Add more coordinates for other popups as needed
+    ];
+
     let currentPopupIndex = 0;
     const popups = document.querySelectorAll('.win98popup');
+    const popupShownFlags = Array(popups.length).fill(false);
     let okButtonClicked = false;
 
     function showPopup(index) {
-        if (okButtonClicked || index === 0) {
-            if (index === 0) {
-                // For the first popup, position it in the center
-                const top = (window.innerHeight - popups[index].offsetHeight) / 2;
-                const left = (window.innerWidth - popups[index].offsetWidth) / 2;
-                popups[index].style.top = `${top}px`;
-                popups[index].style.left = `${left}px`;
-            } else {
-                // For subsequent popups, position them randomly
-                const randomTop = Math.min(Math.floor(Math.random() * (window.innerHeight - popups[index].offsetHeight)), window.innerHeight - popups[index].offsetHeight - 10);
-                const randomLeft = Math.floor(Math.random() * (window.innerWidth - popups[index].offsetWidth));
-                popups[index].style.top = `${randomTop}px`;
-                popups[index].style.left = `${randomLeft}px`;
-            }
+        popups.forEach((popup, i) => {
+            popup.style.display = (i === 0 || popupShownFlags[i]) ? 'flex' : 'none';
+        });
 
-            popups[index].style.display = 'flex';
+        if ((okButtonClicked || index === 0) && !popupShownFlags[index]) {
+            const { top, left } = popupCoordinates[index];
+
+            popups[index].style.top = `${top}px`;
+            popups[index].style.left = `${left}px`;
+
+            popupShownFlags[index] = true;
         }
     }
 
@@ -30,9 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentPopupIndex < popups.length) {
             showPopup(currentPopupIndex);
         } else {
-            // All popups are shown, you can handle this case or reset to the first popup.
             currentPopupIndex = 0;
-            okButtonClicked = false; // Reset the flag
+            okButtonClicked = false;
             showPopup(currentPopupIndex);
         }
     }
@@ -42,6 +52,5 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', nextPopup);
     });
 
-    // Show the initial popup
     showPopup(currentPopupIndex);
 });

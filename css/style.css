@@ -2,8 +2,19 @@ body {
   margin: 0;
   background: #55aaaa;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column; /* Align icons in a column */
+}
+
+.icon {
+  padding-left: 15px;
+  padding-top: 15px;
+  margin-bottom: 20px; /* Add margin-bottom to create space between icons */
 }
 
 .taskbar {
