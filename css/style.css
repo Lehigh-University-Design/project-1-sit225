@@ -17,6 +17,8 @@ body {
   margin-bottom: 20px; /* Add margin-bottom to create space between icons */
 }
 
+
+
 .taskbar {
   background: #c0c0c0;
   height: 12px;
@@ -28,10 +30,25 @@ body {
   justify-content: space-between;
   box-shadow: 0 -2px #fffdfc, 0 -4px #cce9eb;
 
-  img{
-    height:fit-content;
-    display: block;
-  }
+}
+
+.email{
+  position: absolute;
+  display: none;
+  height: 300px;
+  width: auto;
+  top: 125px;
+  left: 1000px;
+  
+}
+
+.gif{
+  position: absolute;
+  display: none;
+  height: 100px;
+  width: auto;
+  top: 100px;
+  left: 100px;
 }
 
 .win98popup {

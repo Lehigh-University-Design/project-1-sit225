@@ -33,6 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
             popups[index].style.left = `${left}px`;
 
             popupShownFlags[index] = true;
+
+            if (index === 3) {
+                const emailImage = document.querySelector('.gif');
+                emailImage.style.display = 'block';
+            }
+
+            if (index === 7) {
+                const emailImage = document.querySelector('.email');
+                emailImage.style.display = 'block';
+            }
         }
     }
 
