@@ -1,0 +1,58 @@
+/* Navbar */
+
+.navbar {
+    /* Variables */
+    --color-navbar-bg: #c2c6ca;;
+    --color-dark-faded: #00a;
+    --color-text: #ffffff;
+    --color-link: var(--color-dark-faded);
+    --color-hover: var(--color-text);
+
+    /* Properties */
+    position: fixed;
+    font-family: "Microsoft Sans Serif", sans-serif;
+    font-size: 15px;
+    font-weight: 100px;
+    bottom: 0;
+    background-color: var(--color-navbar-bg);
+    display: flex;
+    justify-content: center;
+    opacity: 0.70;
+    width: 100%;
+    padding-block: 15px;
+
+    p, a, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
+        margin: 0px;
+        line-height: 100%;
+        color: var(--color-text);
+    }
+}
+
+.navbar-name {
+    margin: 0px;
+    padding-right: 50px;
+    border-right: 2px solid var(--color-dark-faded);
+    color: var(--color-text);
+}
+
+.navbar-links {
+    margin: 0px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+    margin-left: 20px;
+    color: var(--color-link);
+}
+
+.navbar a.active,
+.navbar a:hover {
+    color: var(--color-text);
+}
+
+.navbar-padding {
+    margin: 0px;
+    padding: 0px;
+}
