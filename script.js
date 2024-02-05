@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupCoordinates = [
         { top: 370, left: 730 }, // Coordinates for popup_0
         { top: 150, left: 300 }, // Coordinates for popup_1
-        { top: 600, left: 1000 }, // Coordinates for popup_2
-        { top: 700, left: 150 }, // Coordinates for popup_3
-        { top: 120, left: 1510 }, // Coordinates for popup_4
+        { top: 500, left: 1000 }, // Coordinates for popup_2
+        { top: 450, left: 150 }, // Coordinates for popup_3
+        { top: 120, left: 1290 }, // Coordinates for popup_4
         { top: 350, left: 666 }, // Coordinates for popup_5
-        { top: 540, left: 1400 }, // Coordinates for popup_6
+        { top: 440, left: 1120 }, // Coordinates for popup_6
         { top: 50, left: 1280 }, // Coordinates for popup_7
         { top: 330, left: 400 }, // Coordinates for popup_8
         { top: 150, left: 1120 }, // Coordinates for popup_9
