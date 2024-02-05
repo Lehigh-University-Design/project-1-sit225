@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupShownFlags = Array(popups.length).fill(false);
     let okButtonClicked = false;
 
+    const popupSound = document.getElementById('popupSound');
+
     function showPopup(index) {
         popups.forEach((popup, i) => {
             popup.style.display = (i === 0 || popupShownFlags[i]) ? 'flex' : 'none';
@@ -34,10 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+   
     function nextPopup() {
         okButtonClicked = true;
-        currentPopupIndex++;
 
+        popupSound.play();
+
+        currentPopupIndex++;
         if (currentPopupIndex < popups.length) {
             showPopup(currentPopupIndex);
         } else {

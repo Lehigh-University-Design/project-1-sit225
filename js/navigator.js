@@ -19,14 +19,11 @@ var websites = [
 var currentIndex = 0;
 
 window.onload = function getCurrentIndex() {
-    var path = window.location.href; 
+    var path = window.location.href.split("#")[0];
     var page = path.split("/");
-
-    if (page.includes("https") || page.includes("http"))
-        currentIndex = websites.indexOf(path);
-    else
-        currentIndex = websites.indexOf(page.pop());
-}
+    
+    currentIndex = websites.indexOf(path);
+    }
 
 /*
  *  Goes to the previous page from the index of current page in list
