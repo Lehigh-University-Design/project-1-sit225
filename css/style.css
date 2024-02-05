@@ -9,15 +9,28 @@ body {
 .icon-container {
   display: flex;
   flex-direction: column; /* Align icons in a column */
+
+  p-long{
+    font-size: 14px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+
+  p-short{
+    font-size: 14px;
+    padding-left: 28px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
 }
 
 .icon {
+  height: auto;
+  width: 55px;
   padding-left: 15px;
   padding-top: 15px;
-  margin-bottom: 20px; /* Add margin-bottom to create space between icons */
 }
-
-
 
 .taskbar {
   background: #c0c0c0;
